@@ -3,8 +3,8 @@
 
 Designing, building & blogging a small desktop CNC.
 
+.Current machine status
 image::images/status.png[]
-
 
 == What's going on here then?
 I'm designing a tiny desktop-friendly CNC. This repository will contain the design files, and I'm also blogging about the project in this readme file.
@@ -40,8 +40,8 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
 - Controller board: `MKS GEN_L V2.1`
 - Stepper motor drivers: 3x `TMC2209 V1.2`. These are silent, have software controlled current settings and support sensorless homing. With these, the machine won't need limit switches.
 - Steppers:
-  * 2x large `NEMA 17` stepper motors. The X and Y axis motors will be stationary, and they can be larger (longer) than the Z motor.
-  * 1x normal-sized `NEMA 17` stepper motor. This will be moving as part of the X-carriage, so it shouldn't be too heavy.
+  * 2x large `NEMA 17` stepper motors. The X- and Y-axis motors will be stationary, and they can be larger (longer) than the Z motor.
+  * 1x normal-sized `NEMA 17` stepper motor for the Z-axis. This will be moving as part of the X-carriage, so it shouldn't be too heavy.
 - LCD screen: `RepRapDiscount Full Graphic Smart LCD Controller`
 - Wifi controller and web UI: A `Raspberry Pi` running chilipeppr or similar program.
 - Spindle Motor: https://www.aliexpress.com/item/32908212687.html[Chinese 200W ER11 spindle with bracket]
@@ -96,7 +96,7 @@ image:images/updates/02/z-carriage_top.png[,300]
 I actually don't want to use 3D-printed parts in this particular part of the machine. Anywhere but here. The spindle can get pretty hot, and that heat will creep into the 3D-printed block. I don't want to worry about my machine parts melting when I use the machine, so I'll have to pull some tricks here. Perhaps I can design in a sheet of plywood between the aluminium bracket and the 3D-printed block, as thermal insulation. We'll see.
 
 === X-carriage / Z-axis
-The first X-carriage is a simple box made from 3D-printed parts.
+The first X-carriage design is a simple box made from 3D-printed parts.
 (The stepper motor and coupling don't quite line up with the brass nut in the z-carriage. I'll rework it later.)
 
 image:images/updates/02/x-carriage.png[600, 600]
