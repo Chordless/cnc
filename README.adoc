@@ -6,8 +6,6 @@ Designing, building & blogging a small desktop CNC.
 image::images/status.png[]
 
 
-
-
 == What's going on here then?
 I'm designing a tiny desktop-friendly CNC. This repository will contain the design files, and I'm also blogging about the project in this readme file.
 
@@ -37,7 +35,8 @@ There are lots of great, free-to-build CNC designs already in existence on the i
 == Bill Of Materials
 I haven't designed the whole machine yet, so lots of things are missing in this section.
 
-=== (Motion) electronics
+
+=== Electronics
 - Controller board: `MKS GEN_L V2.1`
 - Stepper motor drivers: 3x `TMC2209 V1.2`. These are silent, have software controlled current settings and support sensorless homing. With these, the machine won't need limit switches.
 - Steppers:
@@ -45,22 +44,24 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
   * 1x normal-sized `NEMA 17` stepper motor. This will be moving as part of the X-carriage, so it shouldn't be too heavy.
 - LCD screen: `RepRapDiscount Full Graphic Smart LCD Controller`
 - Wifi controller and web UI: A `Raspberry Pi` running chilipeppr or similar program.
+- Spindle Motor: https://www.aliexpress.com/item/32908212687.html[Chinese 200W ER11 spindle with bracket]
 
 
 == Update 1 - 2021-03-18
 
-image::images/updates/01/frame.png[Humble beginnings]
+.Humble beginnings
+image::images/updates/01/frame.png[]
 
 
 I've started sketching up the frame in Fusion 360. The rough design plan is:
 
 - A cutting area in the upper front part of the machine.
   * Y-carriage moving from front to rear.
-  * X carriage moving from side to side
-  * Z carriage mounted on the X axis, moving up and down.
+  * X-carriage moving from side to side
+  * Z-carriage mounted on the X axis, moving up and down.
 - A space under the machine for power-supplies etc.
 - A space in the upper rear part of the machine for the motion controller and Raspberry Pi.
-- A space in the lower rear part the machine for a powerful exhaust fan and some kind of dust filter. Perhaps this will contain a vaccum bag, and literally work as a built-in vacuum cleaner.
+- A space in the lower rear part the machine for a powerful exhaust fan and some kind of dust filter. Perhaps this will contain a vaccum cleanr bag, and literally work as a built-in vacuum cleaner.
 
 image::images/updates/01/section.png[500,500]
 
@@ -74,3 +75,38 @@ image:images/updates/01/LMK8UU v4.png[200,200]
 image:images/updates/01/T8 Brass Nut v2.png[200,200]
 image:images/updates/01/Spindle Clamp 52mm v2.png[200,200]
 image:images/updates/01/Spindle 200W v2.png[200,300]
+
+== Update 2 - 2021-03-19
+
+.It's not easy being small
+image::images/updates/02/frame.png[]
+
+I've designed a first version of the Z-carriage and started on the X-carriage it rides on.
+This machine is inspired by the tiny Voron 0 3D printer, which has _outside_ dimensions of 24 cm cubed. Right now my frame sketch has those _inside_ dimensions in the cutting chamber, so it's already larger than the Voron. And I've designed a Z-axis as small as I could without getting into weird tricks.
+
+And yeah, that's the Z axis stepper motor poking through the top. _Oops._ I can expand the machine dimensions a bit more, but I don't want to go *that* big. I'll have to redesign these parts and save space wherever I can.
+
+=== Z-carriage
+The Z-carriage itself is pretty small. Most of it consists of the spindle mount bracket, and a small 3D-printed block to hold 4 bearings and a nut. If I'm sticking with a 52mm diameter spindle, and the metal bracket, there's not much space that can be saved here.
+
+image:images/updates/02/z-carriage.png[,400]
+image:images/updates/02/z-carriage_rear.png[,400]
+image:images/updates/02/z-carriage_top.png[,300]
+
+I actually don't want to use 3D-printed parts in this particular part of the machine. Anywhere but here. The spindle can get pretty hot, and that heat will creep into the 3D-printed block. I don't want to worry about my machine parts melting when I use the machine, so I'll have to pull some tricks here. Perhaps I can design in a sheet of plywood between the aluminium bracket and the 3D-printed block, as thermal insulation. We'll see.
+
+=== X-carriage / Z-axis
+The first X-carriage is a simple box made from 3D-printed parts.
+(The stepper motor and coupling don't quite line up with the brass nut in the z-carriage. I'll rework it later.)
+
+image:images/updates/02/x-carriage.png[600, 600]
+
+There's probably a bit of space to save here.
+
+- The box sides aren't _necessary_. They do help with rigidity though.
+- Perhaps the axis could be folded, using a belt drive, so that the stepper motor isn't on top. I don't know where else i want to put it though.
+- The whole axis could be made shorter.
+
+image:images/updates/02/x-carriage_coupling.png[600, 600]
+
+In this image, the axis is all the way up, at the end of it's 40mm travel. The stepper motor shaft and flexible coupling make me waste quite a lot of space. Without those, the box could be shortened so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100mm leadscrew, instead of a regular shaft, I can save 30mm of height here. That's probably too good to pass up.
