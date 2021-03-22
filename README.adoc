@@ -32,6 +32,21 @@ There are lots of great, free-to-build CNC designs already in existence on the i
   - It would be nice if a tiny mill could mill tiny parts accurately. But this one won't. I'll be using cheap parts. Hopefully some of the parts can be "upgraded" for those with a larger bugdet, without requiring a redesign of the machine. Like using proper brand name linear bearings instead of the bottom dollar stuff I will be using. The bearing form factor will still be the same.
 
 
+== (Planned) Machine specs
+
+- Fixed-gantry CNC machine
+- 200W spindle
+- 8mm linear rods for Z-axis
+- 12mm linear rods for X- and Y-axes
+- T8 Leadscrew and brass nuts for all axes
+- NEMA 17 Stepper motors
+- Auto homing - Sensorless, so it can be homed in all directions (X-,X+,Y-,Y+,Z-,Z+)
+- Fully enclosed
+- Integrated dust filter
+- Small desktop footprint (let's say less than 40cm cubed)
+- Working area of around 130 x 100 x 40 mm (X, Y, Z)
+
+
 == Bill Of Materials
 I haven't designed the whole machine yet, so lots of things are missing in this section.
 
@@ -50,7 +65,7 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
 == Update 1 - 2021-03-18
 
 .Humble beginnings
-image::images/updates/01/frame.png[]
+image::images/updates/01/status.png[]
 
 
 I've started sketching up the frame in Fusion 360. The rough design plan is:
@@ -61,7 +76,7 @@ I've started sketching up the frame in Fusion 360. The rough design plan is:
   * Z-carriage mounted on the X axis, moving up and down.
 - A space under the machine for power-supplies etc.
 - A space in the upper rear part of the machine for the motion controller and Raspberry Pi.
-- A space in the lower rear part the machine for a powerful exhaust fan and some kind of dust filter. Perhaps this will contain a vaccum cleanr bag, and literally work as a built-in vacuum cleaner.
+- A space in the lower rear part the machine for a powerful exhaust fan and some kind of dust filter. Perhaps this will contain a vaccum cleaner bag, and literally work as a built-in vacuum cleaner.
 
 image::images/updates/01/section.png[500,500]
 
@@ -79,7 +94,7 @@ image:images/updates/01/Spindle 200W v2.png[200,300]
 == Update 2 - 2021-03-19
 
 .It's not easy being small
-image::images/updates/02/frame.png[]
+image::images/updates/02/status.png[]
 
 I've designed a first version of the Z-carriage and started on the X-carriage it rides on.
 This machine is inspired by the tiny Voron 0 3D printer, which has _outside_ dimensions of 24 cm cubed. Right now my frame sketch has those _inside_ dimensions in the cutting chamber, so it's already larger than the Voron. And I've designed a Z-axis as small as I could without getting into weird tricks.
@@ -110,3 +125,34 @@ There's probably a bit of space to save here.
 image:images/updates/02/x-carriage_coupling.png[600, 600]
 
 In this image, the axis is all the way up, at the end of it's 40mm travel. The stepper motor shaft and flexible coupling make me waste quite a lot of space. Without those, the box could be shortened so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100mm leadscrew, instead of a regular shaft, I can save 30mm of height here. That's probably too good to pass up.
+
+
+== Update 3 - 20201-03-22
+
+.Redesigned Z-axis
+image::images/updates/03/status.png[]
+
+I managed to improve the Z-axis and shrink it down to something usable. I still had to increase the height of the machine a bit, but not that much.
+Before and after shots of the Z-axis:
+
+image:images/updates/02/x-carriage_coupling.png[,500]
+image:images/updates/03/x-carriage_coupling.png[,420]
+
+The images are not to scale, so it's not a perfect comparison. The box has been shortened a lot, and the plastic sides are gone. I added clearance for the stepper motor coupler to the Z-carriage part, so I don't have to use a special stepper motor with integrated leadscrew after all. The Z-carriage now moves all the way up so it touches the plate holding the stepper motor, and axis travel is still 40mm.
+
+The Z-axis and X-carriage is now complete, so I will print this version and see if things fit together as planned.
+
+image::images/updates/03/x-carriage.png[]
+
+image::images/updates/03/x-carriage_rear.png[]
+
+I will also be liberally using "mock" parts for this test assembly, since no linear motion parts have been ordered from ebay yet. A bunch of more standard parts were modeled:
+
+image:images/updates/03/mocks/608ZZ Bearing v2.png[,150]
+image:images/updates/03/mocks/Flexible Coupling v2.png[,200]
+image:images/updates/03/mocks/LMK8LUU v2.png[,250]
+image:images/updates/03/mocks/LMK12UU v2.png[,270]
+image:images/updates/03/mocks/NEMA 17 37mm v4.png[,300]
+image:images/updates/03/mocks/NEMA 17 60mm v2.png[,300]
+
+The next step of the design is to revisit the machine frame. I want to make some layout changes before properly designing in the X-axis.
