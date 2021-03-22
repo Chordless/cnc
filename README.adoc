@@ -58,8 +58,28 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
   * 2x large `NEMA 17` stepper motors. The X- and Y-axis motors will be stationary, and they can be larger (longer) than the Z motor.
   * 1x normal-sized `NEMA 17` stepper motor for the Z-axis. This will be moving as part of the X-carriage, so it shouldn't be too heavy.
 - LCD screen: `RepRapDiscount Full Graphic Smart LCD Controller`
-- Wifi controller and web UI: A `Raspberry Pi` running chilipeppr or similar program.
+- Wifi controller and web UI: A `Raspberry Pi` running chilipeppr, cncjs, or similar program.
 - Spindle Motor: https://www.aliexpress.com/item/32908212687.html[Chinese 200W ER11 spindle with bracket]
+
+=== Linear Motion
+* Z-axis
+  - 2x LMK8LUU linear bearings
+  - 1x T8 flanged brass nut (Pitch/Leads still undecided)
+  - 2x 8x100mm linear rods
+  - 1x T8x90mm trapezoidal leadscrew (Pitch/Leads still undecided)
+  - 1x 608ZZ ball bearing ("skate-bearing")
+  - 1x Flexible shaft coupling, 5mm to 8mm
+* X-axis
+  - 4x LMK12UU linear bearings
+  - 1x T8 flanged brass nut (Pitch/Leads still undecided)
+  - 2x 12x???mm linear rods (Axis length undecided)
+  - 1x T8x???mm trapezoidal leadscrew (Length/Pitch/Leads still undecided)
+* Y-axis
+  - 4x LMK12UU linear bearings
+  - 1x T8 flanged brass nut (Pitch/Leads still undecided)
+  - 2x 12x???mm linear rods (Axis length undecided)
+  - 1x T8x???mm trapezoidal leadscrew (Length/Pitch/Leads still undecided)
+
 
 
 == Update 1 - 2021-03-18
