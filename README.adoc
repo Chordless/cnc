@@ -147,7 +147,7 @@ image:images/updates/02/x-carriage_coupling.png[600, 600]
 In this image, the axis is all the way up, at the end of it's 40mm travel. The stepper motor shaft and flexible coupling make me waste quite a lot of space. Without those, the box could be shortened so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100mm leadscrew, instead of a regular shaft, I can save 30mm of height here. That's probably too good to pass up.
 
 
-== Update 3 - 20201-03-22
+== Update 3 - 2021-03-22
 
 .Redesigned Z-axis
 image::images/updates/03/status.png[]
