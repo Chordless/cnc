@@ -1,5 +1,5 @@
 = The ERK-1 CNC
-:toc:
+:toc: preamble
 
 Designing, building & blogging a small desktop CNC.
 
@@ -121,6 +121,7 @@ This machine is inspired by the tiny Voron 0 3D printer, which has _outside_ dim
 
 And yeah, that's the Z axis stepper motor poking through the top. _Oops._ I can expand the machine dimensions a bit more, but I don't want to go *that* big. I'll have to redesign these parts and save space wherever I can.
 
+[discrete]
 === Z-carriage
 The Z-carriage itself is pretty small. Most of it consists of the spindle mount bracket, and a small 3D-printed block to hold 4 bearings and a nut. If I'm sticking with a 52mm diameter spindle, and the metal bracket, there's not much space that can be saved here.
 
@@ -130,6 +131,7 @@ image:images/updates/02/z-carriage_top.png[,300]
 
 I actually don't want to use 3D-printed parts in this particular part of the machine. Anywhere but here. The spindle can get pretty hot, and that heat will creep into the 3D-printed block. I don't want to worry about my machine parts melting when I use the machine, so I'll have to pull some tricks here. Perhaps I can design in a sheet of plywood between the aluminium bracket and the 3D-printed block, as thermal insulation. We'll see.
 
+[discrete]
 === X-carriage / Z-axis
 The first X-carriage design is a simple box made from 3D-printed parts.
 (The stepper motor and coupling don't quite line up with the brass nut in the z-carriage. I'll rework it later.)
@@ -176,3 +178,30 @@ image:images/updates/03/mocks/NEMA 17 37mm v4.png[,300]
 image:images/updates/03/mocks/NEMA 17 60mm v2.png[,300]
 
 The next step of the design is to revisit the machine frame. I want to make some layout changes before properly designing in the X-axis.
+
+
+== Update 4 - 2021-03-25
+
+.Redesigned frame
+image::images/updates/04/status.png[]
+
+The frame has been redesigned, now it looks more like a usable machine. I plan to have a hinged plexiglas cover in front of the cutting area, and a 3D-printed panel on the right side. The right side panel will hold the LCD-display, emergency stop button, and probably a spindle speed control knob.
+
+image::images/updates/04/frame_top.png[]
+
+The frame plan changed a bit:
+
+- The cutting chamber is still on the front left side.
+- There's no longer a power-supply chamber under the machine.
+- The whole right side of the machine is now the electronics compartment.
+ * (Hopefully i can fit all the controllers and power supplies here.)
+- There is another chamber behind the cutting area, that I plan to use for dust management (an integrated vaccum cleaner).
+
+Outside dimensions at this point are:  +
+40cm x 44cm x 34cm (width x length x height)
+
+There is also now a complete X-Axis. The rods are held in halfway-trough drilled holes in the wooden side panels. I am unsure if this is a good idea, or if I should design some actual holders for the rods, that then bolt onto the side panels. On the other hand, that would eat up a couple centimetres of X-axis travel.
+
+image::images/updates/04/x-axis.png[]
+
+Next step: The Y-carriage
