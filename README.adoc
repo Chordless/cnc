@@ -15,35 +15,35 @@ There are lots of great, free-to-build CNC designs already in existence on the i
 == Goals
 * Apartment friendly
   - Quiet _enough_. CNC cutting will never be silent, but I'm trying to keep it quiet enough that the neighbors don't call the cops.
-  - Dust control. CNCs can spew out lots of fine wood dust, and this would be terrible in an apartment. The machine must be fully enclosed, have controlled negative air pressure and a filter for catching all the dust. It needs something like a built-in vaccum cleaner.
-  - Stowable. It should all be contained in a single unit, that you can pick up off the desk and stow in a closet. This also means it must be light enough that one person can feasibly carry it.
+  - Dust control. CNCs can spew out lots of fine wood dust, and this would be terrible in an apartment. The machine must be fully enclosed, have controlled negative air pressure and a filter for catching all the dust. It needs something like a built-in vacuum cleaner.
+  - "Stow"-able. It should all be contained in a single unit, that you can pick up off the desk and stow in a closet. This also means it must be light enough that one person can feasibly carry it.
 * Inexpensive
   - I'm going for a price of around 300-400$
 * Possible to build without another CNC / Laser cutter. Some parts will unfortunately require a 3D printer. The machine frame will be mostly made out of wood.
-* Smallest possible footprint. I'm inspired by the amazingly small Voron 0 3D printer, but will have to scale up a bit from that ideal.
+* As small a footprint as possible. I'm inspired by the amazingly small Voron 0 3D printer, but will have to scale up a bit from that ideal.
 
 
 == Non-goals
 * Metal milling
   - Out of the question. Nope. Not doing it. This will be a machine that can cut wood, plastics and modeling foam.
 * Big working area
-  - Not a goal at all. The machine footprint will be tiny in DIY CNC terms, and the cutting area will be even smaller. I'm totally fine with a toy-like working area of 10cm x 13cm x 2cm.
+  - Not a goal at all. The machine footprint will be tiny in DIY CNC terms, and the cutting area will be even smaller. I'm totally fine with a toy-like working area of 10 cm x 13 cm x 2 cm.
 * Precision
-  - It would be nice if a tiny mill could mill tiny parts accurately. But this one won't. I'll be using cheap parts. Hopefully some of the parts can be "upgraded" for those with a larger bugdet, without requiring a redesign of the machine. Like using proper brand name linear bearings instead of the bottom dollar stuff I will be using. The bearing form factor will still be the same.
+  - It would be nice if a tiny mill could mill tiny parts accurately. But this one won't. I'll be using cheap parts. Hopefully some of the parts can be "upgraded" for those with a larger budget, without requiring a redesign of the machine. Like using proper brand name linear bearings instead of the bottom dollar stuff I will be using. The bearing form factor will still be the same.
 
 
 == (Planned) Machine specs
 
 - Fixed-gantry CNC machine
 - 200W spindle
-- 8mm linear rods for Z-axis
-- 12mm linear rods for X- and Y-axes
+- 8 mm linear rods for the Z-axis
+- 12 mm linear rods for the X- and Y-axes
 - T8 Leadscrew and brass nuts for all axes
 - NEMA 17 Stepper motors
 - Auto homing - Sensorless, so it can be homed in all directions (X-,X+,Y-,Y+,Z-,Z+)
 - Fully enclosed
 - Integrated dust filter
-- Small desktop footprint (let's say less than 40cm cubed)
+- Small desktop footprint (let's say less than 40 cm cubed)
 - Working area of around 130 x 100 x 40 mm (X, Y, Z)
 
 
@@ -58,17 +58,17 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
   * 2x large `NEMA 17` stepper motors. The X- and Y-axis motors will be stationary, and they can be larger (longer) than the Z motor.
   * 1x normal-sized `NEMA 17` stepper motor for the Z-axis. This will be moving as part of the X-carriage, so it shouldn't be too heavy.
 - LCD screen: `RepRapDiscount Full Graphic Smart LCD Controller`
-- Wifi controller and web UI: A `Raspberry Pi` running chilipeppr, cncjs, or similar program.
+- Wi-Fi controller and web UI: A `Raspberry Pi` running chilipeppr, cncjs, or similar program.
 - Spindle Motor: https://www.aliexpress.com/item/32908212687.html[Chinese 200W ER11 spindle with bracket]
 
 === Linear Motion
 * Z-axis
   - 2x LMK8LUU linear bearings
   - 1x T8 flanged brass nut (Pitch/Leads still undecided)
-  - 2x 8x100mm linear rods
-  - 1x T8x90mm trapezoidal leadscrew (Pitch/Leads still undecided)
+  - 2x 8x100 mm linear rods
+  - 1x T8x90 mm trapezoidal leadscrew (Pitch/Leads still undecided)
   - 1x 608ZZ ball bearing ("skate-bearing")
-  - 1x Flexible shaft coupling, 5mm to 8mm
+  - 1x Flexible shaft coupling, 5 mm to 8 mm
 * X-axis
   - 4x LMK12UU linear bearings
   - 1x T8 flanged brass nut (Pitch/Leads still undecided)
@@ -96,7 +96,7 @@ I've started sketching up the frame in Fusion 360. The rough design plan is:
   * Z-carriage mounted on the X axis, moving up and down.
 - A space under the machine for power-supplies etc.
 - A space in the upper rear part of the machine for the motion controller and Raspberry Pi.
-- A space in the lower rear part the machine for a powerful exhaust fan and some kind of dust filter. Perhaps this will contain a vaccum cleaner bag, and literally work as a built-in vacuum cleaner.
+- A space in the lower rear part the machine for a powerful exhaust fan, and some kind of dust filter. Perhaps this will contain a vacuum cleaner bag, and literally work as a built-in vacuum cleaner.
 
 image::images/updates/01/section.png[500,500]
 
@@ -104,7 +104,7 @@ Eventually I realized that the shape and size of the frame is very dependent on 
 
 image::images/updates/01/spindle.png[]
 
-As part of the Z axis design, I'm making CAD models of some of the "standard" linear motion parts I expect to be using. I might even 3D print these models and use them as "mock" parts when prototyping the machine. I still haven't decided on the bearing form factors I will be using, and when I order them it will easily take one or two months before they arrive. Being able to assemble a "fake" version of the Z axis using plastic parts will probably be useful!
+As part of the Z axis design, I'm making CAD models of some "standard" linear motion parts I expect to be using. I might even 3D print these models and use them as "mock" parts when prototyping the machine. I still haven't decided on the bearing form factors I will be using, and when I order them it will easily take one or two months before they arrive. Being able to assemble a "fake" version of the Z axis using plastic parts will probably be useful!
 
 image:images/updates/01/LMK8UU v4.png[200,200]
 image:images/updates/01/T8 Brass Nut v2.png[200,200]
@@ -123,7 +123,7 @@ And yeah, that's the Z axis stepper motor poking through the top. _Oops._ I can 
 
 [discrete]
 === Z-carriage
-The Z-carriage itself is pretty small. Most of it consists of the spindle mount bracket, and a small 3D-printed block to hold 4 bearings and a nut. If I'm sticking with a 52mm diameter spindle, and the metal bracket, there's not much space that can be saved here.
+The Z-carriage itself is pretty small. Most of it consists of the spindle mount bracket, and a small 3D-printed block to hold 4 bearings and a nut. If I'm sticking with a 52 mm diameter spindle, and the metal bracket, there's not much space that can be saved here.
 
 image:images/updates/02/z-carriage.png[,400]
 image:images/updates/02/z-carriage_rear.png[,400]
@@ -141,12 +141,12 @@ image:images/updates/02/x-carriage.png[600, 600]
 There's probably a bit of space to save here.
 
 - The box sides aren't _necessary_. They do help with rigidity though.
-- Perhaps the axis could be folded, using a belt drive, so that the stepper motor isn't on top. I don't know where else i want to put it though.
+- Perhaps the axis could be folded, using a belt drive, so that the stepper motor isn't on top. I don't know where else I want to put it though.
 - The whole axis could be made shorter.
 
 image:images/updates/02/x-carriage_coupling.png[600, 600]
 
-In this image, the axis is all the way up, at the end of it's 40mm travel. The stepper motor shaft and flexible coupling make me waste quite a lot of space. Without those, the box could be shortened so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100mm leadscrew, instead of a regular shaft, I can save 30mm of height here. That's probably too good to pass up.
+In this image, the axis is all the way up, at the end of it's 40 mm travel. The stepper motor shaft and flexible coupling make me waste quite a lot of space. Without those, the box could be shortened, so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100 mm leadscrew, instead of a regular shaft, I can save 30 mm of height here. That's probably too good to pass up.
 
 
 == Update 3 - 2021-03-22
@@ -160,7 +160,7 @@ Before and after shots of the Z-axis:
 image:images/updates/02/x-carriage_coupling.png[,500]
 image:images/updates/03/x-carriage_coupling.png[,420]
 
-The images are not to scale, so it's not a perfect comparison. The box has been shortened a lot, and the plastic sides are gone. I added clearance for the stepper motor coupler to the Z-carriage part, so I don't have to use a special stepper motor with integrated leadscrew after all. The Z-carriage now moves all the way up so it touches the plate holding the stepper motor, and axis travel is still 40mm.
+The images are not to scale, so it's not a perfect comparison. The box has been shortened a lot, and the plastic sides are gone. I added clearance for the stepper motor coupler to the Z-carriage part, so I don't have to use a special stepper motor with an integrated leadscrew after all. The Z-carriage now moves all the way up, so it touches the plate holding the stepper motor, and axis travel is still 40 mm.
 
 The Z-axis and X-carriage is now complete, so I will print this version and see if things fit together as planned.
 
@@ -194,14 +194,61 @@ The frame plan changed a bit:
 - The cutting chamber is still on the front left side.
 - There's no longer a power-supply chamber under the machine.
 - The whole right side of the machine is now the electronics compartment.
- * (Hopefully i can fit all the controllers and power supplies here.)
-- There is another chamber behind the cutting area, that I plan to use for dust management (an integrated vaccum cleaner).
+ * (Hopefully I can fit all the controllers and power supplies here.)
+- There is another chamber behind the cutting area, that I plan to use for dust management (an integrated vacuum cleaner).
 
 Outside dimensions at this point are:  +
-40cm x 44cm x 34cm (width x length x height)
+40 cm x 44 cm x 34 cm (width x length x height)
 
 There is also now a complete X-Axis. The rods are held in halfway-trough drilled holes in the wooden side panels. I am unsure if this is a good idea, or if I should design some actual holders for the rods, that then bolt onto the side panels. On the other hand, that would eat up a couple centimetres of X-axis travel.
 
 image::images/updates/04/x-axis.png[]
 
 Next step: The Y-carriage
+
+== Update 5 - 2021-03-29
+
+No real design update today. The Y-axis is in progress. I'll just be writing about electronics and 3D printed prototyping since I think it's neat.
+
+[discrete]
+=== Electronics
+These are the electronics I plan to use (disregard the blue lab power supply at the top):
+
+image::images/updates/05/electronics.jpeg[]
+
+The controller board is the `MKS GEN_L V2.1`. It's based on the 8-bit ATMEGA2560 CPU, quite common among 3D printer controller boards, and has nice inputs and outputs for the common things a 3D-printer needs. It's also quite easy to repurpose for driving a CNC.
+
+The stepper drivers I am using are the `TMC2209`, and they should be very good in combination with this board. For one thing, the drivers make the steppers move very quietly. The stepper motor noise is not much compared to a cutting tool driving through wood, but every little bit helps. The board supports communicating with these drivers over UART, so the board can send configuration commands to the drivers, and get status updates in return. This lets us configure the stepper motor current in the firmware. For example, we can set the current of each driver to exactly 1400mA, instead of fiddling with a tiny potentiometer to try to achieve a similar result.
+
+The stepper drivers can also tell the firmware when motors are unable to move as commanded and lose steps. This means we can let the machine home itself without using any limit switches. We just tell the machine to move as far as possible along, say, the negative X-axis. When the machine hits the end of its travel, the motors will stall, and the stepper drivers will let the controller board know. We can then mark the current X position as X=0. This also lets us do the same thing for the positive X direction, and the same for the Y-axis and Z-axis. This is normally not supported on such machines, as positive homing would require 3 extra limit switches, in addition to the regular 3 switches used for homing each axis to zero.
+
+The plan is to use this for usability improvements in the machine. Like automatically homing each axis to the positive direction after a cutting job. This would move the spindle up and to the right (out of the way), while pushing the Y-carriage towards the user. Which is nice.
+
+
+[discrete]
+=== Prototyping
+I have printed a prototype of the Z-carriage and X-carriage. The parts printed in white are "real" machine parts; I intend for these to be 3D-printed in the final machine. The blue parts are just stand-ins; these are supposed to be standard linear motion parts that will be ordered when the machine design is complete. I had these modeled anyway to help with the CAD design of the machine, so it didn't take much extra work to get them 3D-printed.
+
+.Z-axis all the way down
+image::images/updates/05/z-axis_down.jpeg[]
+
+.Z-axis all the way up
+image::images/updates/05/z-axis_up.jpeg[]
+
+.Z-carriage with mock spindle and motor mount
+image::images/updates/05/z-carriage_assembled.jpeg[]
+
+
+.Z-carriage with mock spindle and motor mount, disassembled
+image::images/updates/05/z-carriage_with_motor.jpeg[]
+
+Prototyping like this is not only *fun*, but also lets me get a feel for the assembly of these parts, and catch problems early. Assembly went ok this time, there were no inaccessible screw-holes or such things. I found a few things I want to change though.
+
+The current X-carriage consists of two parts: A large base part, and a top plate (holding the stepper motor) that screws into it from the top.
+
+.Full Z-axis (Z-carriage and X-carriage)
+image::images/updates/05/z-axis.jpeg[]
+
+I was hoping the screws would hold these two pieces tightly together and in alignment. After seeing it in real life, I don't think the screw connection is strong enough. I will probably redesign the X-carriage to be a single part. This also lets me push the top X-rail higher up on the X-carriage, giving a longer distance between the X-axis rails. This is generally a good idea, mechanically.
+
+I also think I can save a centimeter or two in the width of the X-carriage. The width of the Z-carriage is more or less defined by the width of the motor mount; this doesn't need to carry over to the X-carriage. At the very least the linear bearing flanges don't need to stick out of the sides of the X-carriage. This gives less distance (left to right) between the X-rail bearings, which is not a good idea mechanically. The upside is that it would give me more X-axis travel without increasing the width of the machine.
