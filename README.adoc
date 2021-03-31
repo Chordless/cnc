@@ -16,18 +16,18 @@ There are lots of great, free-to-build CNC designs already in existence on the i
 * Apartment friendly
   - Quiet _enough_. CNC cutting will never be silent, but I'm trying to keep it quiet enough that the neighbors don't call the cops.
   - Dust control. CNCs can spew out lots of fine wood dust, and this would be terrible in an apartment. The machine must be fully enclosed, have controlled negative air pressure and a filter for catching all the dust. It needs something like a built-in vacuum cleaner.
-  - "Stow"-able. It should all be contained in a single unit, that you can pick up off the desk and stow in a closet. This also means it must be light enough that one person can feasibly carry it.
+  - "Stow-able". It should all be contained in a single unit, that you can pick up off the desk and stow in a closet. This also means it must be light enough that one person can feasibly carry it.
 * Inexpensive
   - I'm going for a price of around 300-400$
 * Possible to build without another CNC / Laser cutter. Some parts will unfortunately require a 3D printer. The machine frame will be mostly made out of wood.
-* As small a footprint as possible. I'm inspired by the amazingly small Voron 0 3D printer, but will have to scale up a bit from that ideal.
+* As small a footprint as possible. I'm inspired by the amazingly small https://vorondesign.com/voron0[Voron 0] 3D printer, but will have to scale up a bit from that ideal.
 
 
 == Non-goals
 * Metal milling
   - Out of the question. Nope. Not doing it. This will be a machine that can cut wood, plastics and modeling foam.
 * Big working area
-  - Not a goal at all. The machine footprint will be tiny in DIY CNC terms, and the cutting area will be even smaller. I'm totally fine with a toy-like working area of 10 cm x 13 cm x 2 cm.
+  - Not a goal at all. The machine footprint will be tiny in DIY CNC terms, and the cutting area will be even smaller. I'm totally fine with a toy-like working area of 13 cm x 10 cm x 2 cm.
 * Precision
   - It would be nice if a tiny mill could mill tiny parts accurately. But this one won't. I'll be using cheap parts. Hopefully some of the parts can be "upgraded" for those with a larger budget, without requiring a redesign of the machine. Like using proper brand name linear bearings instead of the bottom dollar stuff I will be using. The bearing form factor will still be the same.
 
@@ -44,7 +44,7 @@ There are lots of great, free-to-build CNC designs already in existence on the i
 - Fully enclosed
 - Integrated dust filter
 - Small desktop footprint (let's say less than 40 cm cubed)
-- Working area of around 130 x 100 x 40 mm (X, Y, Z)
+- Working area of around 130 x 130 x 30 mm (X, Y, Z)
 
 
 == Bill Of Materials
@@ -227,7 +227,7 @@ The plan is to use this for usability improvements in the machine. Like automati
 
 [discrete]
 === Prototyping
-I have printed a prototype of the Z-carriage and X-carriage. The parts printed in white are "real" machine parts; I intend for these to be 3D-printed in the final machine. The blue parts are just stand-ins; these are supposed to be standard linear motion parts that will be ordered when the machine design is complete. I had these modeled anyway to help with the CAD design of the machine, so it didn't take much extra work to get them 3D-printed.
+I have printed a prototype of the Z-carriage and X-carriage. The parts printed in white are "real" machine parts; I intend for these to be 3D-printed in the final machine. The blue parts are just stand-ins; these are supposed to be standard linear motion parts that will be ordered when the machine design is complete. I already had these modeled to help with the CAD design of the machine, so it didn't take much extra work to get them 3D-printed.
 
 .Z-axis all the way down
 image::images/updates/05/z-axis_down.jpeg[]
@@ -252,3 +252,28 @@ image::images/updates/05/z-axis.jpeg[]
 I was hoping the screws would hold these two pieces tightly together and in alignment. After seeing it in real life, I don't think the screw connection is strong enough. I will probably redesign the X-carriage to be a single part. This also lets me push the top X-rail higher up on the X-carriage, giving a longer distance between the X-axis rails. This is generally a good idea, mechanically.
 
 I also think I can save a centimeter or two in the width of the X-carriage. The width of the Z-carriage is more or less defined by the width of the motor mount; this doesn't need to carry over to the X-carriage. At the very least the linear bearing flanges don't need to stick out of the sides of the X-carriage. This gives less distance (left to right) between the X-rail bearings, which is not a good idea mechanically. The upside is that it would give me more X-axis travel without increasing the width of the machine.
+
+
+== Update 6 - 2021-03-31
+
+.All 3 axes designed
+image::images/updates/06/status.png[]
+
+The machine now has a Y-carriage and Y-axis! Once all the three axes were in place, lots of small adjustments happened.
+
+image:images/updates/06/y-carriage.png[,400]
+image:images/updates/06/y-axis.png[,400]
+
+- The X-axis was aligned, so the cutting tool is in the middle of the Y-axis.
+- The angle on the front of the frame was changed from 45 deg to 30 deg. The top of the spindle motor could collide with the front plexiglas without this change.
+- I also increased the Z-axis travel from 40 mm to 60 mm. This is just to ensure the Z-axis has enough clearance, even when using long or short cutting tools. In practice the thickest material you will be able to work with is 20-30 mm.
+
+image::images/updates/06/x-carriage_taller.png[]
+
+So far I've been designing the frame with a 28 mm material thickness. The material I will be using is actually 22 mm, so I updated the model to match this. The machine outer dimensions became slightly smaller as a result. Right now the machine dimensions are 396 x 396 x 324 mm (width, length, height). The machine travel is 138 x 130 x 60 mm (X, Y, Z). The model is parametric, so I can change this at will, but I'm currently trying to make the machine fit inside a 40 cm cube.
+
+Axis travel *will* decrease in the future, since I've decided to change how the linear rails and screws mount to the frame. They are currently designed to fit inside halfway-through drilled holes in the frame sides. The positions of these drilled holes are absolutely critical, and if a hole is off by a fraction of a millimeter the axis will bind up instead of moving smoothly. I want the machine to be easy (and not require a CNC) to make, so this will not work.
+
+I will be designing some 3D-printed "cassettes" to hold the rails and leadscrews, and these can be screwed (as a unit) inside each side of the frame. This will eat up maybe 2 cm of travel on the X and Y axes, but I think it is a necessary change.
+
+At this point I could go on to modeling the electronics and filling out the electronics compartment, but I have quite a few things I want to refine and adjust in the cutting part of the machine first.
