@@ -277,3 +277,23 @@ Axis travel *will* decrease in the future, since I've decided to change how the 
 I will be designing some 3D-printed "cassettes" to hold the rails and leadscrews, and these can be screwed (as a unit) inside each side of the frame. This will eat up maybe 2 cm of travel on the X and Y axes, but I think it is a necessary change.
 
 At this point I could go on to modeling the electronics and filling out the electronics compartment, but I have quite a few things I want to refine and adjust in the cutting part of the machine first.
+
+== Update 7 - 2021-04-04
+
+image::images/updates/07/status.png[]
+
+The changes are hardly visible in the machine frame image, but I have been reworking some details in the Z- and X-axes.
+
+The X-carriage is now a single 3D-printed part. It also has some large cutouts at the back to reduce plastic usage and printing time. Hopefully it will still be strong enough for the machine. The Z-axis linear rails now insert from the top, and get clamped in place with a bolt and nut. The X-carriage has also been slimmed down a bit, gaining 12 mm of X-axis travel.
+
+image::images/updates/07/x-carriage.png[]
+
+The X-axis also has some changes: The "cassettes" or mounting blocks have been designed. These ensure that the X-axis linear rails and leadscrew are parallel to each other. These blocks still have to be bolted to the frame sides with some precision, so the linear rails are perpendicular to the frame, but hopefully this is doable by hand.
+
+image::images/updates/07/x-axis.png[]
+
+Each of the mounting blocks are 10 mm thick, so in the worst case they eat up 20 mm of axis travel. In combination with the slimmer X-carriage, X-axis travel was only reduced by 8 mm. Not too bad!
+
+With some luck, I will be able to add these mounting blocks to the Y-axis without affecting travel at all. I can just make the Y-carriage 20mm shorter, underneath the spoilboard, to compensate.
+
+Next up: The Y-axis also needs a pair of these mounting blocks.

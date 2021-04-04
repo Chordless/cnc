@@ -2,14 +2,5 @@
 
 Notes to self, since these things are getting numerous.
 
-
-== Solid X-carriage
-It's currently two parts, but should be one solid part. This requires making the front "pocket" deeper, so I can access all 4 NEMA 17 motor screw holes from the underside of the top lip. It also requires a way to slide in the Z-axis linear rails from the top and clamp them in place.
-
-
-== Slimmer X-carriage
-The X-axis linear bearing flanges don't need to stick out of the sides of the X-carriage. This will make the X-carriage the same width as the spindle motor mount. I could go even slimmer than the spindle motor mount, but it might introduce problems.
-
-
 == Rail mounting "cassettes"
 Need 4 of these. One on each end of the X and Y axis rails. One side of each axis can be a fixed block, while the other side should have some way of clamping the linear rails. Preferably these should have some way of adjustment, in case the mounting holes (for the cassettes) are not drilled in the exact correct position.
