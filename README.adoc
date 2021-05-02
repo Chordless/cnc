@@ -64,21 +64,21 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
 === Linear Motion
 * Z-axis
   - 2x LMK8LUU linear bearings
-  - 1x T8 flanged brass nut (Pitch/Leads still undecided)
+  - 1x T8 flanged brass nut  (2 Leads, Pitch 2mm)
   - 2x 8x100 mm linear rods
-  - 1x T8x90 mm trapezoidal leadscrew (Pitch/Leads still undecided)
+  - 1x T8x90 mm trapezoidal leadscrew (2 Leads, Pitch 2mm)
   - 1x 608ZZ ball bearing ("skate-bearing")
-  - 1x Flexible shaft coupling, 5 mm to 8 mm
+  - 1x Rigid shaft coupling, 5 mm to 8 mm
 * X-axis
   - 4x LMK12UU linear bearings
-  - 1x T8 flanged brass nut (Pitch/Leads still undecided)
+  - 1x T8 flanged brass nut (2 Leads, Pitch 2mm)
   - 2x 12x???mm linear rods (Axis length undecided)
-  - 1x T8x???mm trapezoidal leadscrew (Length/Pitch/Leads still undecided)
+  - 1x T8x???mm trapezoidal leadscrew (2 Leads, Pitch 2mm)
 * Y-axis
   - 4x LMK12UU linear bearings
-  - 1x T8 flanged brass nut (Pitch/Leads still undecided)
+  - 1x T8 flanged brass nut (2 Leads, Pitch 2mm)
   - 2x 12x???mm linear rods (Axis length undecided)
-  - 1x T8x???mm trapezoidal leadscrew (Length/Pitch/Leads still undecided)
+  - 1x T8x???mm trapezoidal leadscrew (2 Leads, Pitch 2mm)
 
 
 
@@ -146,7 +146,7 @@ There's probably a bit of space to save here.
 
 image:images/updates/02/x-carriage_coupling.png[600, 600]
 
-In this image, the axis is all the way up, at the end of it's 40 mm travel. The stepper motor shaft and flexible coupling make me waste quite a lot of space. Without those, the box could be shortened, so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100 mm leadscrew, instead of a regular shaft, I can save 30 mm of height here. That's probably too good to pass up.
+In this image, the axis is all the way up, at the end of it's 40 mm travel. The stepper motor shaft and coupling make me waste quite a lot of space. Without those, the box could be shortened, so the Z-axis bearings touch the top of the box in this position. If I choose a stepper motor with an integrated 100 mm leadscrew, instead of a regular shaft, I can save 30 mm of height here. That's probably too good to pass up.
 
 
 == Update 3 - 2021-03-22
@@ -212,7 +212,7 @@ No real design update today. The Y-axis is in progress. I'll just be writing abo
 
 [discrete]
 === Electronics
-These are the electronics I plan to use (disregard the blue lab power supply at the top):
+These are the motion electronics I plan to use (disregard the blue lab power supply at the top):
 
 image::images/updates/05/electronics.jpeg[]
 
@@ -220,7 +220,7 @@ The controller board is the `MKS GEN_L V2.1`. It's based on the 8-bit ATMEGA2560
 
 The stepper drivers I am using are the `TMC2209`, and they should be very good in combination with this board. For one thing, the drivers make the steppers move very quietly. The stepper motor noise is not much compared to a cutting tool driving through wood, but every little bit helps. The board supports communicating with these drivers over UART, so the board can send configuration commands to the drivers, and get status updates in return. This lets us configure the stepper motor current in the firmware. For example, we can set the current of each driver to exactly 1400mA, instead of fiddling with a tiny potentiometer to try to achieve a similar result.
 
-The stepper drivers can also tell the firmware when motors are unable to move as commanded and lose steps. This means we can let the machine home itself without using any limit switches. We just tell the machine to move as far as possible along, say, the negative X-axis. When the machine hits the end of its travel, the motors will stall, and the stepper drivers will let the controller board know. We can then mark the current X position as X=0. This also lets us do the same thing for the positive X direction, and the same for the Y-axis and Z-axis. This is normally not supported on such machines, as positive homing would require 3 extra limit switches, in addition to the regular 3 switches used for homing each axis to zero.
+The stepper drivers can also tell the firmware when motors are unable to move as commanded; when they lose steps. This means we can let the machine home itself without using any limit switches. We just tell the machine to move as far as possible along, say, the negative X-axis. When the machine hits the end of its travel, the motors will stall, and the stepper drivers will let the controller board know. We can then mark the current X position as X=0. This also lets us do the same thing for the positive X direction, and the same for the Y-axis and Z-axis. This is normally not supported on such machines, as positive homing would require 3 extra limit switches, in addition to the regular 3 switches used for homing each axis to zero.
 
 The plan is to use this for usability improvements in the machine. Like automatically homing each axis to the positive direction after a cutting job. This would move the spindle up and to the right (out of the way), while pushing the Y-carriage towards the user. Which is nice.
 
@@ -266,11 +266,11 @@ image:images/updates/06/y-axis.png[,400]
 
 - The X-axis was aligned, so the cutting tool is in the middle of the Y-axis.
 - The angle on the front of the frame was changed from 45 deg to 30 deg. The top of the spindle motor could collide with the front plexiglas without this change.
-- I also increased the Z-axis travel from 40 mm to 60 mm. This is just to ensure the Z-axis has enough clearance, even when using long or short cutting tools. In practice the thickest material you will be able to work with is 20-30 mm.
+- I also increased the Z-axis travel from 40 mm to 60 mm. This is just to ensure the Z-axis has enough clearance, even when using long or short cutting tools. In practice the thickest material you will be able to work with is still only 20-30 mm.
 
 image::images/updates/06/x-carriage_taller.png[]
 
-So far I've been designing the frame with a 28 mm material thickness. The material I will be using is actually 22 mm, so I updated the model to match this. The machine outer dimensions became slightly smaller as a result. Right now the machine dimensions are 396 x 396 x 324 mm (width, length, height). The machine travel is 138 x 130 x 60 mm (X, Y, Z). The model is parametric, so I can change this at will, but I'm currently trying to make the machine fit inside a 40 cm cube.
+So far I've been designing the frame with a 28 mm material thickness. The MDF wood sheets I will be using are actually 22 mm thick, so I updated the model to match this. The machine outer dimensions became slightly smaller as a result. Right now the machine dimensions are 396 x 396 x 324 mm (width, length, height). The machine travel is 138 x 130 x 60 mm (X, Y, Z). The model is parametric, so I can change this at will, but I'm currently trying to make the machine fit inside a 40 cm cube.
 
 Axis travel *will* decrease in the future, since I've decided to change how the linear rails and screws mount to the frame. They are currently designed to fit inside halfway-through drilled holes in the frame sides. The positions of these drilled holes are absolutely critical, and if a hole is off by a fraction of a millimeter the axis will bind up instead of moving smoothly. I want the machine to be easy (and not require a CNC) to make, so this will not work.
 
@@ -297,3 +297,20 @@ Each of the mounting blocks are 10 mm thick, so in the worst case they eat up 20
 With some luck, I will be able to add these mounting blocks to the Y-axis without affecting travel at all. I can just make the Y-carriage 20mm shorter, underneath the spoilboard, to compensate.
 
 Next up: The Y-axis also needs a pair of these mounting blocks.
+
+== Update 8 - 2021-05-02
+
+image::images/updates/08/status.png[]
+
+I have taken about a month of hiatus from the project. Linear motion parts were all ordered in the meantime, and I expect the last packages to arrive next week. Soon I can do test fitting with real parts. This time I finished up the "casette" design, so the Y-axis now has a pair of mounting blocks for holding the linear rails and leadscrew. This means the cutting chamber of the machine is fully designed (or, at least the first version of it). Things will probably still change as I start building the machine and find out where the snags are.
+
+.Y-axis with mounting blocks
+image::images/updates/08/y-axis.png[]
+
+Other minor adjustments:
+
+- Switched over to using rigid couplings between stepper motors and leadscrews, on all axes. The design still has clearance for the larger flexible type couplings, for those who want to use that.
+- Improvement to ease assembly: the Z-axis leadscrew can now be inserted/removed through a hole in the bottom of the X-carriage. You no longer need to remove the Z-axis stepper motor to get at it.
+
+
+
