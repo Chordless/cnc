@@ -1,6 +1,5 @@
 = Things to rework
 
-Notes to self, since these things are getting numerous.
+(Notes to self, since these things were getting numerous.)
 
-== Rail mounting "cassettes"
-Need 4 of these. One on each end of the X and Y axis rails. One side of each axis can be a fixed block, while the other side should have some way of clamping the linear rails. Preferably these should have some way of adjustment, in case the mounting holes (for the cassettes) are not drilled in the exact correct position.
+Nothing here right now.

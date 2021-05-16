@@ -1,0 +1,5 @@
+= Yeah
+
+Try to avoid using powertools when screwing into 3D-printed parts. If you must use machine tools, do it slowly, and take breaks. The friction of the screw against the plastic can make things really hot. If you just drive a screw in as fast as you can, you will probably melt the screw hole and ruin the threads. At the very minimuim, take a break and let things cool down, before screwing the last bit. If the threads are melted and soft when you tighten things together, the threads will get destroyed.
+
+The Z-axis stepper motor shaft needs to be shortened to get the rigid coupler sufficiently up and away from the Z-carriage. The shaft is normally about 22mm. Use a dremel or something to shorten the shaft to 15mm. Try to avoid getting metal powder in the bearings of the stepper motor (use masking tape or something while you are cutting).

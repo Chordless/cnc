@@ -312,5 +312,56 @@ Other minor adjustments:
 - Switched over to using rigid couplings between stepper motors and leadscrews, on all axes. The design still has clearance for the larger flexible type couplings, for those who want to use that.
 - Improvement to ease assembly: the Z-axis leadscrew can now be inserted/removed through a hole in the bottom of the X-carriage. You no longer need to remove the Z-axis stepper motor to get at it.
 
+== Update 9 - 2021-05-16
+
+image::images/updates/09/status.png[]
+
+Lots to share this time. I've been working quite a bit on the project without updating. Most of the changes are subtle. Parts in the cutting chamber have been printed, improved, and reprinted. Practically every 3D-printed part was updated.
+
+=== Prototyping
+
+The mounting blocks I designed earlier had an unexpected side benefit. They allow me to assemble and test-fit the X- and Y-axes. I didn't think I would be able to assemble so much of the machine before building the wooden frame.
 
 
+.X- and Z-axis assembly. Linear rods for the Z-axis in the background; they haven't been cut to length yet.
+image::images/updates/09/x-axis.jpeg[]
+
+.Y-axis assembly. The blue square is a stand-in for the spacing the wooden frame will give the motor.
+image::images/updates/09/y-axis.jpeg[]
+
+.Both axes
+image::images/updates/09/prototypes.jpeg[]
+
+Note that the axes in the photos above are about 10cm longer than what will be fitted on the final machine. I'm holding off on cutting the rods to length for as long as I can. It would not be cool if I shortened these 400mm rods to 240mm, and a design change forced me to make the rods 260mm instead.
+
+=== Electronics compartment
+
+image::images/updates/09/electronics-compartment.png[]
+
+I've made a layout for the electronics compartment. It will contain quite a few things:
+
+- 12V PSU (grey) - large psu, supplies power to most things
+- 48V PSU (black) - powers the spindle motor
+- MKS GEN_L V2.1 (green) - motion controller
+- Raspberry PI 3 or 4 (upper right) - sends commands to the motion controller
+- Whatever other parts are sticking into this chamber
+  * X-axis stepper motor
+  * E-stop from the front panel
+  * LCD display from the front panel (not modeled yet)
+
+The general plan is to mount two pieces of DIN-rail in this chamber, and let the electronics hang off of that. DIN-rails are usually not used vertically like I'm doing here. I'm hoping that I will be able to 3D-print any clamps or spacers needed to make it work.
+
+
+=== Control Panel
+
+image::images/updates/09/electronics-overview.png[]
+
+I've started designing the control panel. It will occupy the right side of the front of the machine. It's made up of different modules that fit into the slot, held in place by wood screws.
+
+.Planned modules:
+- E-stop holder
+- Spindle control panel (speed knob, on/off switch)
+- LCD panel (using a display module common in 3D-printers)
+- Spacer (just a blank panel to take up the rest of the space)
+
+Next steps: Completing the control panel. Maybe starting work on the "vaccum cleaner" part, becind the cutting chamber?
