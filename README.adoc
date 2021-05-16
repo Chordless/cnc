@@ -322,15 +322,17 @@ Lots to share this time. I've been working quite a bit on the project without up
 
 The mounting blocks I designed earlier had an unexpected side benefit. They allow me to assemble and test-fit the X- and Y-axes. I didn't think I would be able to assemble so much of the machine before building the wooden frame.
 
-
 .X- and Z-axis assembly. Linear rods for the Z-axis in the background; they haven't been cut to length yet.
 image::images/updates/09/x-axis.jpeg[]
+
 
 .Y-axis assembly. The blue square is a stand-in for the spacing the wooden frame will give the motor.
 image::images/updates/09/y-axis.jpeg[]
 
+
 .Both axes
 image::images/updates/09/prototypes.jpeg[]
+
 
 Note that the axes in the photos above are about 10cm longer than what will be fitted on the final machine. I'm holding off on cutting the rods to length for as long as I can. It would not be cool if I shortened these 400mm rods to 240mm, and a design change forced me to make the rods 260mm instead.
 
@@ -364,4 +366,4 @@ I've started designing the control panel. It will occupy the right side of the f
 - LCD panel (using a display module common in 3D-printers)
 - Spacer (just a blank panel to take up the rest of the space)
 
-Next steps: Completing the control panel. Maybe starting work on the "vaccum cleaner" part, becind the cutting chamber?
+Next steps: Completing the control panel. Maybe starting work on the "vaccum cleaner" part, behind the cutting chamber?
