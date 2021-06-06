@@ -318,6 +318,7 @@ image::images/updates/09/status.png[]
 
 Lots to share this time. I've been working quite a bit on the project without updating. Most of the changes are subtle. Parts in the cutting chamber have been printed, improved, and reprinted. Practically every 3D-printed part was updated.
 
+[discrete]
 === Prototyping
 
 The mounting blocks I designed earlier had an unexpected side benefit. They allow me to assemble and test-fit the X- and Y-axes. I didn't think I would be able to assemble so much of the machine before building the wooden frame.
@@ -336,6 +337,7 @@ image::images/updates/09/prototypes.jpeg[]
 
 Note that the axes in the photos above are about 10cm longer than what will be fitted on the final machine. I'm holding off on cutting the rods to length for as long as I can. It would not be cool if I shortened these 400mm rods to 240mm, and a design change forced me to make the rods 260mm instead.
 
+[discrete]
 === Electronics compartment
 
 image::images/updates/09/electronics-compartment.png[]
@@ -353,7 +355,7 @@ I've made a layout for the electronics compartment. It will contain quite a few 
 
 The general plan is to mount two pieces of DIN-rail in this chamber, and let the electronics hang off of that. DIN-rails are usually not used vertically like I'm doing here. I'm hoping that I will be able to 3D-print any clamps or spacers needed to make it work.
 
-
+[discrete]
 === Control Panel
 
 image::images/updates/09/electronics-overview.png[]
@@ -367,3 +369,33 @@ I've started designing the control panel. It will occupy the right side of the f
 - Spacer (just a blank panel to take up the rest of the space)
 
 Next steps: Completing the control panel. Maybe starting work on the "vaccum cleaner" part, behind the cutting chamber?
+
+
+== Update 10 - 2021-06-06
+
+image::images/updates/10/status.png[]
+
+The front control panel is completed.
+
+image::images/updates/10/frontpanel.png[]
+
+It contains these modules, from the top:
+
+ - Top plate with model number. Just filling up the extra space that was available.
+ - LCD display and controller: Holds the RepRapDiscount Full Graphic Smart Controller.
+ - Spindle control: Spindle speed potentiometer and on/off switch.
+    * This module might be unnecessary, if I can get the firmware and motion controller to manage the spindle motor for us. It will at least be present in the first version of the CNC.
+ - Emergency stop button. I have not deciced if I want to wire this up to kill all power to the machine, or to just have it cut power to the spindle motor.
+ - Bottom plate.
+
+[discrete]
+=== Remaining
+
+Most of the machine has now been designed! These are the things I can think of that are remaining:
+
+ - Vent holes.
+   * I plan for outside air to get sucked into the electronics compartment, through the cutting chamber, and then being exhausted through the vacuum cleaner.
+ - The vacuum cleaner module itself
+ - A hinge and handle for the front plexiglas sheet.
+ - A jig for locating screw holes. This will help assemble the wooden frame parts.
+
