@@ -64,21 +64,21 @@ I haven't designed the whole machine yet, so lots of things are missing in this 
 === Linear Motion
 * Z-axis
   - 2x LMK8LUU linear bearings
-  - 1x T8 flanged brass nut  (2 Leads, Pitch 2mm)
+  - 1x T8 flanged brass nut  (2 Leads, Pitch 2 mm)
   - 2x 8x100 mm linear rods
-  - 1x T8x90 mm trapezoidal leadscrew (2 Leads, Pitch 2mm)
+  - 1x T8x90 mm trapezoidal leadscrew (2 Leads, Pitch 2 mm)
   - 1x 608ZZ ball bearing ("skate-bearing")
   - 1x Rigid shaft coupling, 5 mm to 8 mm
 * X-axis
   - 4x LMK12UU linear bearings
-  - 1x T8 flanged brass nut (2 Leads, Pitch 2mm)
+  - 1x T8 flanged brass nut (2 Leads, Pitch 2 mm)
   - 2x 12x???mm linear rods (Axis length undecided)
-  - 1x T8x???mm trapezoidal leadscrew (2 Leads, Pitch 2mm)
+  - 1x T8x???mm trapezoidal leadscrew (2 Leads, Pitch 2 mm)
 * Y-axis
   - 4x LMK12UU linear bearings
-  - 1x T8 flanged brass nut (2 Leads, Pitch 2mm)
+  - 1x T8 flanged brass nut (2 Leads, Pitch 2 mm)
   - 2x 12x???mm linear rods (Axis length undecided)
-  - 1x T8x???mm trapezoidal leadscrew (2 Leads, Pitch 2mm)
+  - 1x T8x???mm trapezoidal leadscrew (2 Leads, Pitch 2 mm)
 
 
 
@@ -294,7 +294,7 @@ image::images/updates/07/x-axis.png[]
 
 Each of the mounting blocks are 10 mm thick, so in the worst case they eat up 20 mm of axis travel. In combination with the slimmer X-carriage, X-axis travel was only reduced by 8 mm. Not too bad!
 
-With some luck, I will be able to add these mounting blocks to the Y-axis without affecting travel at all. I can just make the Y-carriage 20mm shorter, underneath the spoilboard, to compensate.
+With some luck, I will be able to add these mounting blocks to the Y-axis without affecting travel at all. I can just make the Y-carriage 20 mm shorter, underneath the spoilboard, to compensate.
 
 Next up: The Y-axis also needs a pair of these mounting blocks.
 
@@ -302,7 +302,7 @@ Next up: The Y-axis also needs a pair of these mounting blocks.
 
 image::images/updates/08/status.png[]
 
-I have taken about a month of hiatus from the project. Linear motion parts were all ordered in the meantime, and I expect the last packages to arrive next week. Soon I can do test fitting with real parts. This time I finished up the "casette" design, so the Y-axis now has a pair of mounting blocks for holding the linear rails and leadscrew. This means the cutting chamber of the machine is fully designed (or, at least the first version of it). Things will probably still change as I start building the machine and find out where the snags are.
+I have taken about a month of hiatus from the project. Linear motion parts were all ordered in the meantime, and I expect the last packages to arrive next week. Soon I can do test fitting with real parts. This time I finished up the "cassette" design, so the Y-axis now has a pair of mounting blocks for holding the linear rails and leadscrew. This means the cutting chamber of the machine is fully designed (or, at least the first version of it). Things will probably still change as I start building the machine and find out where the snags are.
 
 .Y-axis with mounting blocks
 image::images/updates/08/y-axis.png[]
@@ -335,7 +335,7 @@ image::images/updates/09/y-axis.jpeg[]
 image::images/updates/09/prototypes.jpeg[]
 
 
-Note that the axes in the photos above are about 10cm longer than what will be fitted on the final machine. I'm holding off on cutting the rods to length for as long as I can. It would not be cool if I shortened these 400mm rods to 240mm, and a design change forced me to make the rods 260mm instead.
+Note that the axes in the photos above are about 10 cm longer than what will be fitted on the final machine. I'm holding off on cutting the rods to length for as long as I can. It would not be cool if I shortened these 400 mm rods to 240 mm, and a design change forced me to make the rods 260 mm instead.
 
 [discrete]
 === Electronics compartment
@@ -368,7 +368,7 @@ I've started designing the control panel. It will occupy the right side of the f
 - LCD panel (using a display module common in 3D-printers)
 - Spacer (just a blank panel to take up the rest of the space)
 
-Next steps: Completing the control panel. Maybe starting work on the "vaccum cleaner" part, behind the cutting chamber?
+Next steps: Completing the control panel. Maybe starting work on the "vacuum cleaner" part, behind the cutting chamber?
 
 
 == Update 10 - 2021-06-06
@@ -385,7 +385,7 @@ It contains these modules, from the top:
  - LCD display and controller: Holds the RepRapDiscount Full Graphic Smart Controller.
  - Spindle control: Spindle speed potentiometer and on/off switch.
     * This module might be unnecessary, if I can get the firmware and motion controller to manage the spindle motor for us. It will at least be present in the first version of the CNC.
- - Emergency stop button. I have not deciced if I want to wire this up to kill all power to the machine, or to just have it cut power to the spindle motor.
+ - Emergency stop button. I have not decided if I want to wire this up to kill all power to the machine, or to just have it cut power to the spindle motor.
  - Bottom plate.
 
 [discrete]
@@ -399,3 +399,31 @@ Most of the machine has now been designed! These are the things I can think of t
  - A hinge and handle for the front plexiglas sheet.
  - A jig for locating screw holes. This will help assemble the wooden frame parts.
 
+
+== Update 11 - 2021-06-12
+
+.No visible changes from the front.
+image::images/updates/11/status.png[]
+
+This time I have designed the vent and "vacuum cleaner" system I wanted. This will use a single fan both for cooling and dust filtering. The plan is for this fan to spin slowly whenever the machine is on, to ensure airflow around the electronics. When the machine starts cutting, the fan should ramp up to full power to suck away as much cutting dust as possible. The air is filtered through a common vacuum cleaner bag behind the cutting area. The air takes a long route, through the whole machine:
+
+.Machine air intake on the left, exhaust on the right.
+image::images/updates/11/Vent_rear.png[0,500]
+
+.Intake upper right, exhaust to cutting chamber lower left.
+image::images/updates/11/Vent_electronics.png[0,500]
+
+.Intake lower right, exhaust to vacuum cleaner behind the X-axis.
+image::images/updates/11/Vent_cutting.png[0,500]
+
+.Air gets sucked through a common vacuum cleaner bag, mounted above the Y-axis stepper motor.
+image::images/updates/11/Vent_vacuum.png[0,500]
+
+.Air is finally exhausted through the rear of the machine by a powerful 60 mm fan.
+image::images/updates/11/Vent_exhaust.png[0,500]
+
+That's the plan for handling both cooling, and dust produced by the machine. It's a lot of work for a single 60 mm fan. We'll have to see if can handle the job, once the machine is built and running.
+
+For reference, the vacuum bag holder I have designed is for a Philips Geneva HR6995 vacuum cleaner. I'm hoping that's a common type of vacuum cleaner bag, that can be sourced anywhere. If this turns out not to be the case, it should be easy to switch to another type of bag. Perhaps I will create several variants of the vacuum cleaner bag holder.
+
+I finally received the last machine parts I lacked: The spindle motor, motor clamp and motor power supply. Things are rapidly approaching the stage where I can assemble the first version of the machine. The main blocker right now is that I need to manufacture the wooden panels for the frame. These need to be cut to the correct dimensions, and they need to be cut squarely. I have tried some test cuts with the woodworking tools I have on hand, and the results weren't good enough. I think I will need access to a table saw to be able to properly cut the machine frame.
