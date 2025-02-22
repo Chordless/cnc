@@ -1,0 +1,36 @@
+1: Base
+356 x 356
+
+2: MidWall
+306 x 356
+
+3: RearSeparatorWall
+240 x 306
+
+4: Top
+400 x 245
+
+5: Front Lip
+82 x 356
+
+6: Rear
+356 x 328
+
+7: Left
+400 x 328
+
+8: Right
+400 x 328
+
+
+
+
+*Diagonal Cutting*
+
+7 & 8, Left & Right panels:
+	Distance from bottom: 	82
+	Distance from rear: 	258
+
+MidWall:
+	Distance from bottom: 	98
+	Distance from rear:		236
